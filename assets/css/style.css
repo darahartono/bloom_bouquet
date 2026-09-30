@@ -1,0 +1,918 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffafb;
+    color: #3d3035;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #eee1e5;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 75px;
+}
+
+
+.logo {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #8e536d;
+}
+
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+.nav-menu a {
+    color: #4b3b42;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #a75b7b;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    text-align: center;
+
+    padding: 75px 20px 55px;
+
+    background: #f9eef3;
+}
+
+
+.page-header .subtitle {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #a75b7b;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.page-header h1 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    color: #563846;
+
+    margin-bottom: 15px;
+}
+
+
+.page-header p:last-child {
+    color: #75666c;
+}
+
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+.product-section {
+    padding: 60px 0 80px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 45px;
+}
+
+
+.search-box form {
+    display: flex;
+
+    width: 100%;
+
+    max-width: 550px;
+}
+
+
+.search-box input {
+    flex: 1;
+
+    padding: 13px 18px;
+
+    border: 1px solid #d9c5cd;
+
+    border-right: none;
+
+    border-radius: 8px 0 0 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.search-box input:focus {
+    border-color: #a75b7b;
+}
+
+
+.search-box button {
+    padding: 13px 25px;
+
+    border: none;
+
+    background: #a75b7b;
+
+    color: white;
+
+    border-radius: 0 8px 8px 0;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.search-box button:hover {
+    background: #8e536d;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card {
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #eee1e5;
+
+    box-shadow:
+        0 5px 20px rgba(80, 50, 60, 0.07);
+
+    transition: 0.3s;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(80, 50, 60, 0.12);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+    width: 100%;
+
+    height: 300px;
+
+    background: #f8edf1;
+
+    overflow: hidden;
+}
+
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info {
+    padding: 23px;
+}
+
+
+.product-category {
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    color: #a75b7b;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.product-info h2 {
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    color: #4d3740;
+
+    margin-bottom: 10px;
+}
+
+
+.product-description {
+    font-size: 14px;
+
+    color: #776970;
+
+    min-height: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PRICE + DETAIL
+========================= */
+
+.product-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.product-price {
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #8e536d;
+}
+
+
+.detail-button {
+    font-size: 13px;
+
+    color: #a75b7b;
+
+    font-weight: bold;
+}
+
+
+.detail-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   EMPTY PRODUCT
+========================= */
+
+.empty-product {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #eee1e5;
+}
+
+
+.empty-product h2 {
+    font-family: Georgia, serif;
+
+    margin-bottom: 10px;
+}
+
+
+.empty-product p {
+    color: #777;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #4d3740;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ABOUT & CONTACT
+   BACKGROUND
+========================= */
+
+.about-page,
+.contact-page {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(255, 255, 255, 0.92) 42%,
+            rgba(255, 255, 255, 0.55) 100%
+        ),
+        url("../images/hero-bouquet.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   ABOUT & CONTACT NAVBAR
+========================= */
+
+.about-page .navbar,
+.contact-page .navbar {
+    background: rgba(255, 255, 255, 0.90);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================
+   ABOUT & CONTACT CONTENT
+========================= */
+
+.about-content,
+.contact-content {
+    width: 90%;
+
+    max-width: 1100px;
+
+    min-height: calc(100vh - 140px);
+
+    margin: auto;
+
+    padding: 80px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+/* =========================
+   SMALL TITLE
+========================= */
+
+.page-label {
+    font-size: 13px !important;
+
+    letter-spacing: 4px;
+
+    color: #a75b7b;
+
+    font-weight: bold;
+
+    margin-bottom: 15px !important;
+}
+
+
+/* =========================
+   ABOUT & CONTACT TITLE
+========================= */
+
+.about-content h1,
+.contact-content h1 {
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    color: #563846;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   ABOUT TEXT
+========================= */
+
+.about-content > p:not(.page-label) {
+    max-width: 650px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #5c5056;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   CONTACT INTRO TEXT
+========================= */
+
+.contact-content > p:not(.page-label) {
+    max-width: 650px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #5c5056;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.contact-info {
+    margin-top: 15px;
+}
+
+
+.contact-info h3 {
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    color: #563846;
+
+    margin-top: 18px;
+
+    margin-bottom: 4px;
+}
+
+
+.contact-info p {
+    font-size: 15px !important;
+
+    line-height: 1.6;
+
+    color: #5c5056;
+
+    margin-bottom: 8px !important;
+}
+
+
+/* =========================
+   ABOUT & CONTACT FOOTER
+========================= */
+
+.about-page .footer,
+.contact-page .footer {
+    background: rgba(255, 255, 255, 0.85);
+
+    color: #75666c;
+
+    text-align: center;
+
+    padding: 20px 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .about-content,
+    .contact-content {
+        width: 88%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: column;
+
+        padding: 20px 0;
+
+        gap: 15px;
+    }
+
+
+    .nav-menu {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .product-image {
+        height: 280px;
+    }
+
+
+    /* ABOUT & CONTACT MOBILE */
+
+    .about-content,
+    .contact-content {
+        width: 88%;
+
+        min-height: calc(100vh - 160px);
+
+        padding: 60px 0;
+    }
+
+
+    .about-content h1,
+    .contact-content h1 {
+        font-size: 36px;
+    }
+
+
+    .about-content > p:not(.page-label),
+    .contact-content > p:not(.page-label) {
+        font-size: 15px;
+    }
+
+
+    .about-page,
+    .contact-page {
+        background-position: 65% center;
+    }
+
+}
+
+/* =========================================
+   FIX FINAL - ABOUT & CONTACT
+========================================= */
+
+body.about-page,
+body.contact-page {
+    background-color: #fffafb !important;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.97) 0%,
+            rgba(255, 255, 255, 0.92) 45%,
+            rgba(255, 255, 255, 0.45) 100%
+        ),
+        url("../images/hero-bouquet.png") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+
+    color: #3d3035 !important;
+    text-align: left !important;
+}
+
+
+/* NAVBAR */
+
+body.about-page .navbar,
+body.contact-page .navbar {
+    background: rgba(255, 255, 255, 0.92) !important;
+
+    border-bottom: 1px solid #eee1e5 !important;
+
+    position: sticky !important;
+    top: 0 !important;
+
+    z-index: 1000 !important;
+}
+
+
+body.about-page .logo,
+body.contact-page .logo {
+    color: #8e536d !important;
+}
+
+
+body.about-page .nav-menu a,
+body.contact-page .nav-menu a {
+    color: #4b3b42 !important;
+}
+
+
+body.about-page .nav-menu a:hover,
+body.about-page .nav-menu a.active,
+body.contact-page .nav-menu a:hover,
+body.contact-page .nav-menu a.active {
+    color: #a75b7b !important;
+}
+
+
+/* CONTENT */
+
+body.about-page .about-content,
+body.contact-page .contact-content {
+    width: 90% !important;
+
+    max-width: 1100px !important;
+
+    min-height: calc(100vh - 150px) !important;
+
+    margin: 0 auto !important;
+
+    padding: 80px 0 !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    align-items: flex-start !important;
+
+    text-align: left !important;
+}
+
+
+/* LABEL */
+
+body.about-page .page-label,
+body.contact-page .page-label {
+    font-size: 13px !important;
+
+    letter-spacing: 4px !important;
+
+    color: #a75b7b !important;
+
+    font-weight: bold !important;
+
+    margin: 0 0 15px 0 !important;
+}
+
+
+/* TITLE */
+
+body.about-page .about-content h1,
+body.contact-page .contact-content h1 {
+    font-family: Georgia, serif !important;
+
+    font-size: 50px !important;
+
+    line-height: 1.1 !important;
+
+    color: #563846 !important;
+
+    margin: 0 0 25px 0 !important;
+
+    text-align: left !important;
+}
+
+
+/* ABOUT PARAGRAPH */
+
+body.about-page .about-content p:not(.page-label) {
+    max-width: 650px !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.8 !important;
+
+    color: #5c5056 !important;
+
+    margin: 0 0 18px 0 !important;
+
+    text-align: left !important;
+}
+
+
+/* CONTACT PARAGRAPH */
+
+body.contact-page .contact-content > p:not(.page-label) {
+    max-width: 650px !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.8 !important;
+
+    color: #5c5056 !important;
+
+    margin: 0 0 18px 0 !important;
+
+    text-align: left !important;
+}
+
+
+/* CONTACT INFO */
+
+body.contact-page .contact-info {
+    margin-top: 10px !important;
+
+    text-align: left !important;
+}
+
+
+body.contact-page .contact-info h3 {
+    font-family: Georgia, serif !important;
+
+    font-size: 18px !important;
+
+    color: #563846 !important;
+
+    margin: 18px 0 4px 0 !important;
+}
+
+
+body.contact-page .contact-info p {
+    font-size: 15px !important;
+
+    line-height: 1.6 !important;
+
+    color: #5c5056 !important;
+
+    margin: 0 0 8px 0 !important;
+
+    text-align: left !important;
+}
+
+
+/* FOOTER */
+
+body.about-page footer,
+body.contact-page footer {
+    background: rgba(255, 255, 255, 0.90) !important;
+
+    color: #75666c !important;
+
+    text-align: center !important;
+
+    padding: 20px 0 !important;
+
+    font-size: 13px !important;
+
+    border-top: 1px solid #eee1e5 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    body.about-page .about-content,
+    body.contact-page .contact-content {
+        width: 88% !important;
+
+        padding: 60px 0 !important;
+    }
+
+
+    body.about-page .about-content h1,
+    body.contact-page .contact-content h1 {
+        font-size: 36px !important;
+    }
+
+
+    body.about-page .about-content p:not(.page-label),
+    body.contact-page .contact-content p:not(.page-label) {
+        font-size: 15px !important;
+    }
+
+}

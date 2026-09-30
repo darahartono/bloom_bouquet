@@ -1,0 +1,125 @@
+<?php
+session_start();
+require_once "../config/koneksi.php";
+
+if (!isset($_SESSION['admin'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$query = mysqli_query($conn, "SELECT * FROM produk ORDER BY id DESC");
+$total_produk = mysqli_num_rows($query);
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Admin - Bloomé Bouquet</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #f8f1f3;
+        }
+
+        .navbar {
+            background: #7b1e2b;
+            color: white;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            background: #5f1521;
+            padding: 10px 15px;
+            border-radius: 7px;
+        }
+
+        .container {
+            padding: 35px;
+        }
+
+        .welcome {
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 250px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #777;
+            margin-top: 0;
+        }
+
+        .card .number {
+            font-size: 35px;
+            font-weight: bold;
+            color: #7b1e2b;
+        }
+
+        .menu {
+            margin-top: 30px;
+        }
+
+        .menu a {
+            display: inline-block;
+            background: #7b1e2b;
+            color: white;
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>Bloomé Bouquet</h2>
+
+    <a href="logout.php">Logout</a>
+</div>
+
+<div class="container">
+
+    <div class="welcome">
+        <h1>Dashboard Admin</h1>
+        <p>Selamat datang, <strong><?= $_SESSION['name']; ?></strong> 🌷</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Produk</h3>
+        <div class="number">
+            <?= $total_produk; ?>
+        </div>
+    </div>
+
+    <div class="menu">
+        <a href="produk/index.php">Kelola Produk</a>
+    </div>
+
+</div>
+
+</body>
+</html>
