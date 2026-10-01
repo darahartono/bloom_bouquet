@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    BLOOM BOUQUET - STYLE CSS
    ========================================================= */
@@ -71,7 +72,6 @@ img {
     align-items: center;
     gap: 30px;
 
-    /* Supaya semua menu termasuk Logout tetap sejajar */
     flex-wrap: nowrap;
 }
 
@@ -137,6 +137,7 @@ img {
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     position: relative;
 
@@ -145,7 +146,7 @@ img {
             rgba(128, 0, 32, 0.35),
             rgba(128, 0, 32, 0.35)
         ),
-        url("../images/Lavender-Dream.jpg");
+        url("../images/hero-bouquet.png");
 
     background-size: cover;
     background-position: center;
@@ -153,31 +154,39 @@ img {
 
 .hero-content {
     width: 90%;
-    max-width: 1200px;
+    max-width: 800px;
+
     margin: auto;
+
+    text-align: center;
 }
 
 .hero-content p {
     font-size: 14px;
     letter-spacing: 4px;
+
     margin-bottom: 15px;
+
     color: #f5d7df;
 }
 
 .hero-content h1 {
     font-family: Georgia, serif;
+
     font-size: 65px;
     line-height: 1.1;
+
     margin-bottom: 20px;
 }
 
 .hero-content span {
     display: block;
 
-    max-width: 500px;
+    max-width: 600px;
+
+    margin: 0 auto 30px auto;
 
     font-size: 17px;
-    margin-bottom: 30px;
 }
 
 
@@ -216,21 +225,22 @@ img {
 .section {
     width: 90%;
     max-width: 1200px;
-
-    margin: auto;
-
+    margin: 0 auto;
     padding: 80px 0;
 }
 
 .section-title {
+    width: 100%;
+    display: block;
     text-align: center;
-
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
 }
 
 .section-title p {
-    font-size: 13px;
+    width: 100%;
+    text-align: center;
 
+    font-size: 13px;
     letter-spacing: 4px;
 
     color: #f5d7df;
@@ -239,9 +249,80 @@ img {
 }
 
 .section-title h2 {
+    width: 100%;
+    text-align: center;
+
     font-family: Georgia, serif;
 
     font-size: 40px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.page-header {
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(128, 0, 32, 0.50),
+            rgba(128, 0, 32, 0.50)
+        ),
+        url("../images/hero-bouquet.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.page-header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.page-header .subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    color: #f5d7df;
+
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+}
+
+.page-header .container > p:last-child {
+    font-size: 16px;
+
+    color: #ffffff;
+
+    max-width: 650px;
+
+    margin: 0 auto;
 }
 
 
@@ -434,380 +515,5 @@ th {
 td {
     padding: 14px;
 
-    border-bottom: 1px solid #eeeeee;
-}
-
-tr:hover td {
-    background: #fff5f7;
-}
-
-
-/* =========================================================
-   GENERAL CONTAINER
-   ========================================================= */
-
-.container {
-    width: 90%;
-
-    max-width: 1200px;
-
-    margin: auto;
-}
-
-
-/* =========================================================
-   DETAIL PRODUK
-   ========================================================= */
-
-.product-detail {
-    width: 90%;
-
-    max-width: 1100px;
-
-    margin: 60px auto;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 50px;
-
-    align-items: center;
-}
-
-.product-detail img {
-    width: 100%;
-
-    max-height: 600px;
-
-    object-fit: cover;
-
-    border-radius: 10px;
-}
-
-.product-detail-info h1 {
-    font-family: Georgia, serif;
-
-    font-size: 42px;
-
-    margin-bottom: 15px;
-}
-
-.product-detail-info .price {
-    font-size: 22px;
-
-    font-weight: bold;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================================
-   ABOUT / CONTACT
-   ========================================================= */
-
-.about-section,
-.contact-section {
-    width: 90%;
-
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 80px 0;
-}
-
-.about-section h1,
-.contact-section h1 {
-    font-family: Georgia, serif;
-
-    font-size: 45px;
-
-    margin-bottom: 25px;
-}
-
-.about-section p,
-.contact-section p {
-    font-size: 16px;
-
-    margin-bottom: 15px;
-}
-
-
-/* =========================================================
-   ALERT
-   ========================================================= */
-
-.alert {
-    padding: 12px 15px;
-
-    margin-bottom: 20px;
-
-    border-radius: 6px;
-
-    background: #ffffff;
-
-    color: #800020;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   LOGIN
-   ========================================================= */
-
-.login-page {
-    min-height: 100vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 30px;
-
-    background: #800020;
-}
-
-.login-container {
-    width: 100%;
-
-    max-width: 420px;
-
-    background: #ffffff;
-
-    color: #800020;
-
-    padding: 40px;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.25);
-}
-
-.login-container h1 {
-    font-family: Georgia, serif;
-
-    text-align: center;
-
-    font-size: 32px;
-
-    margin-bottom: 8px;
-}
-
-.login-container h2 {
-    text-align: center;
-
-    font-size: 18px;
-
-    font-weight: normal;
-
-    margin-bottom: 30px;
-}
-
-.login-container label {
-    display: block;
-
-    margin-bottom: 6px;
-
-    font-size: 14px;
-
-    font-weight: bold;
-}
-
-.login-container input {
-    margin-bottom: 18px;
-}
-
-.login-container button {
-    width: 100%;
-
-    padding: 12px;
-
-    background: #800020;
-
-    color: #ffffff;
-
-    border-radius: 6px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.login-container button:hover {
-    background: #5c0015;
-}
-
-
-/* =========================================================
-   ADMIN
-   ========================================================= */
-
-.admin-container {
-    width: 90%;
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 50px 0;
-}
-
-.admin-container h1 {
-    font-family: Georgia, serif;
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .nav-container {
-        width: 92%;
-    }
-
-    .nav-menu {
-        gap: 18px;
-    }
-
-    .nav-menu a {
-        font-size: 14px;
-    }
-
-    .hero-content h1 {
-        font-size: 50px;
-    }
-
-    .product-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .product-detail {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE SMALL
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    .navbar {
-        position: relative;
-    }
-
-    .nav-container {
-        flex-direction: column;
-
-        padding: 20px 0;
-
-        gap: 15px;
-    }
-
-    .nav-menu {
-        gap: 12px;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-    .nav-menu a {
-        font-size: 13px;
-    }
-
-    .logout-btn {
-        min-width: 70px;
-
-        padding: 7px 12px !important;
-
-        font-size: 12px !important;
-    }
-
-    .hero {
-        min-height: 500px;
-    }
-
-    .hero-content h1 {
-        font-size: 42px;
-    }
-
-    .hero-content span {
-        font-size: 15px;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-
-    .section-title h2 {
-        font-size: 32px;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
-    .product-card img {
-        height: 300px;
-    }
-
-    .product-detail-info h1 {
-        font-size: 32px;
-    }
-
-    .about-section h1,
-    .contact-section h1 {
-        font-size: 35px;
-    }
-
-    .login-container {
-        padding: 30px 25px;
-    }
-}
-
-
-/* =========================================================
-   EXTRA SMALL
-   ========================================================= */
-
-@media (max-width: 400px) {
-
-    .logo {
-        font-size: 21px;
-    }
-
-    .nav-menu {
-        gap: 8px;
-    }
-
-    .nav-menu a {
-        font-size: 12px;
-    }
-
-    .logout-btn {
-        padding: 6px 10px !important;
-
-        font-size: 11px !important;
-    }
-
-    .hero-content h1 {
-        font-size: 35px;
-    }
-}
+    border-bottom:
+```

@@ -29,40 +29,13 @@ $query = mysqli_query(
 
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-
-        /* Tombol Logout */
-        .logout-btn {
-            display: inline-block;
-            padding: 8px 16px;
-
-            background-color: #800020;
-            color: white !important;
-
-            text-decoration: none;
-
-            border-radius: 6px;
-
-            font-size: 13px;
-            font-weight: 500;
-
-            margin-left: 10px;
-
-            transition: 0.3s ease;
-        }
-
-        .logout-btn:hover {
-            background-color: #5c0015;
-            color: white !important;
-
-            transform: translateY(-1px);
-        }
-
-    </style>
-
 </head>
 
 <body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
     <nav class="navbar">
 
@@ -90,7 +63,6 @@ $query = mysqli_query(
                     Contact
                 </a>
 
-                <!-- TOMBOL LOGOUT -->
                 <a href="admin/logout.php" class="logout-btn">
                     Logout
                 </a>
@@ -101,6 +73,10 @@ $query = mysqli_query(
 
     </nav>
 
+
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
 
@@ -128,6 +104,10 @@ $query = mysqli_query(
 
     </section>
 
+
+    <!-- =========================
+         OUR COLLECTION
+    ========================== -->
 
     <section class="section">
 
@@ -167,7 +147,8 @@ $query = mysqli_query(
                         </h3>
 
                         <p>
-                            Rp <?= number_format(
+                            Rp
+                            <?= number_format(
                                 $row['harga'],
                                 0,
                                 ',',
@@ -175,7 +156,7 @@ $query = mysqli_query(
                             ); ?>
                         </p>
 
-                        <a href="detail_produk.php?id=<?= $row['id']; ?>">
+                        <a href="produk/detail-produk.php?id=<?= $row['id']; ?>">
                             View Detail →
                         </a>
 
@@ -194,6 +175,10 @@ $query = mysqli_query(
 
     </section>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
