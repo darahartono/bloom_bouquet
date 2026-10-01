@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if (!isset($_SESSION['admin'])) {
+    header("Location: admin/login.php");
+    exit;
+}
+
 require_once "config/koneksi.php";
 
 $query = mysqli_query(
@@ -21,6 +28,37 @@ $query = mysqli_query(
     <title>Bloom Bouquet</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+
+        /* Tombol Logout */
+        .logout-btn {
+            display: inline-block;
+            padding: 8px 16px;
+
+            background-color: #800020;
+            color: white !important;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-size: 13px;
+            font-weight: 500;
+
+            margin-left: 10px;
+
+            transition: 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #5c0015;
+            color: white !important;
+
+            transform: translateY(-1px);
+        }
+
+    </style>
 
 </head>
 
@@ -50,6 +88,11 @@ $query = mysqli_query(
 
                 <a href="kontak.php">
                     Contact
+                </a>
+
+                <!-- TOMBOL LOGOUT -->
+                <a href="admin/logout.php" class="logout-btn">
+                    Logout
                 </a>
 
             </div>

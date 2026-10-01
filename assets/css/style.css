@@ -1,6 +1,11 @@
-/* =========================
+/* =========================================================
+   BLOOM BOUQUET - STYLE CSS
+   ========================================================= */
+
+
+/* =========================================================
    RESET
-========================= */
+   ========================================================= */
 
 * {
     margin: 0;
@@ -8,618 +13,702 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #fffafb;
-    color: #3d3035;
+    background: #800020;
+    color: #ffffff;
     line-height: 1.6;
 }
-
 
 a {
     text-decoration: none;
     color: inherit;
 }
 
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+img {
+    max-width: 100%;
+    display: block;
 }
 
 
-/* =========================
+/* =========================================================
    NAVBAR
-========================= */
+   ========================================================= */
 
 .navbar {
-    background: #ffffff;
-    border-bottom: 1px solid #eee1e5;
-
+    width: 100%;
+    background: #800020;
+    border-bottom: 1px solid #a52a43;
     position: sticky;
     top: 0;
-
     z-index: 1000;
 }
-
 
 .nav-container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    min-height: 75px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    min-height: 75px;
 }
-
 
 .logo {
     font-family: Georgia, serif;
-
     font-size: 25px;
-
     font-weight: bold;
-
-    color: #8e536d;
+    color: #ffffff;
 }
-
 
 .nav-menu {
     display: flex;
-
     align-items: center;
+    gap: 30px;
 
-    gap: 35px;
+    /* Supaya semua menu termasuk Logout tetap sejajar */
+    flex-wrap: nowrap;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #f5d7df;
 }
 
 
-.nav-menu a {
-    color: #4b3b42;
+/* =========================================================
+   LOGOUT BUTTON
+   ========================================================= */
 
-    font-size: 15px;
+.logout-btn {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 75px;
+
+    padding: 8px 16px !important;
+
+    background: #ffffff !important;
+    color: #800020 !important;
+
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+
+    font-size: 14px !important;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #f5d7df !important;
+    color: #5c0015 !important;
+
+    border-color: #f5d7df;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(128, 0, 32, 0.35),
+            rgba(128, 0, 32, 0.35)
+        ),
+        url("../images/Lavender-Dream.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-content p {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    color: #f5d7df;
+}
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+    font-size: 65px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content span {
+    display: block;
+
+    max-width: 500px;
+
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #ffffff;
+    color: #800020;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
 
     transition: 0.3s;
 }
 
+.btn:hover {
+    background: #f5d7df;
+    color: #5c0015;
 
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: #a75b7b;
+    transform: translateY(-2px);
 }
 
 
-/* =========================
-   PAGE HEADER
-========================= */
+/* =========================================================
+   SECTION
+   ========================================================= */
 
-.page-header {
+.section {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 0;
+}
+
+.section-title {
     text-align: center;
 
-    padding: 75px 20px 55px;
-
-    background: #f9eef3;
+    margin-bottom: 50px;
 }
 
-
-.page-header .subtitle {
+.section-title p {
     font-size: 13px;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 
-    color: #a75b7b;
-
-    font-weight: bold;
+    color: #f5d7df;
 
     margin-bottom: 10px;
 }
 
-
-.page-header h1 {
+.section-title h2 {
     font-family: Georgia, serif;
 
-    font-size: 42px;
-
-    color: #563846;
-
-    margin-bottom: 15px;
+    font-size: 40px;
 }
 
 
-.page-header p:last-child {
-    color: #75666c;
-}
-
-
-/* =========================
-   PRODUCT SECTION
-========================= */
-
-.product-section {
-    padding: 60px 0 80px;
-}
-
-
-/* =========================
-   SEARCH
-========================= */
-
-.search-box {
-    display: flex;
-
-    justify-content: center;
-
-    margin-bottom: 45px;
-}
-
-
-.search-box form {
-    display: flex;
-
-    width: 100%;
-
-    max-width: 550px;
-}
-
-
-.search-box input {
-    flex: 1;
-
-    padding: 13px 18px;
-
-    border: 1px solid #d9c5cd;
-
-    border-right: none;
-
-    border-radius: 8px 0 0 8px;
-
-    outline: none;
-
-    font-size: 14px;
-}
-
-
-.search-box input:focus {
-    border-color: #a75b7b;
-}
-
-
-.search-box button {
-    padding: 13px 25px;
-
-    border: none;
-
-    background: #a75b7b;
-
-    color: white;
-
-    border-radius: 0 8px 8px 0;
-
-    cursor: pointer;
-
-    font-size: 14px;
-}
-
-
-.search-box button:hover {
-    background: #8e536d;
-}
-
-
-/* =========================
+/* =========================================================
    PRODUCT GRID
-========================= */
+   ========================================================= */
 
 .product-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
-    gap: 30px;
+    gap: 25px;
+
+    margin-bottom: 40px;
 }
 
 
-/* =========================
+/* =========================================================
    PRODUCT CARD
-========================= */
+   ========================================================= */
 
 .product-card {
     background: #ffffff;
 
-    border-radius: 15px;
+    color: #800020;
+
+    border-radius: 10px;
 
     overflow: hidden;
 
-    border: 1px solid #eee1e5;
+    transition: 0.3s;
 
     box-shadow:
-        0 5px 20px rgba(80, 50, 60, 0.07);
-
-    transition: 0.3s;
+        0 5px 20px rgba(0, 0, 0, 0.15);
 }
-
 
 .product-card:hover {
     transform: translateY(-5px);
 
     box-shadow:
-        0 10px 30px rgba(80, 50, 60, 0.12);
+        0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-
-/* =========================
-   PRODUCT IMAGE
-========================= */
-
-.product-image {
+.product-card img {
     width: 100%;
 
-    height: 300px;
-
-    background: #f8edf1;
-
-    overflow: hidden;
-}
-
-
-.product-image img {
-    width: 100%;
-
-    height: 100%;
-
-    display: block;
+    height: 280px;
 
     object-fit: cover;
-
-    transition: 0.4s;
 }
-
-
-.product-card:hover .product-image img {
-    transform: scale(1.05);
-}
-
-
-/* =========================
-   PRODUCT INFO
-========================= */
 
 .product-info {
-    padding: 23px;
+    padding: 20px;
 }
 
+.product-info h3 {
+    font-family: Georgia, serif;
 
-.product-category {
-    font-size: 12px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1.5px;
-
-    color: #a75b7b;
-
-    font-weight: bold;
+    font-size: 20px;
 
     margin-bottom: 8px;
 }
 
+.product-info p {
+    font-size: 15px;
 
-.product-info h2 {
-    font-family: Georgia, serif;
+    font-weight: bold;
 
-    font-size: 22px;
+    margin-bottom: 12px;
+}
 
-    color: #4d3740;
+.product-info a {
+    font-size: 14px;
 
-    margin-bottom: 10px;
+    color: #800020;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.product-info a:hover {
+    color: #a52a43;
 }
 
 
-.product-description {
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    width: 100%;
+
+    padding: 30px 20px;
+
+    background: #5c0015;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+form {
+    width: 100%;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: 1px solid #d8aab5;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
     font-size: 14px;
 
-    color: #776970;
+    background: #ffffff;
 
-    min-height: 45px;
+    color: #333333;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #800020;
+
+    box-shadow:
+        0 0 0 2px rgba(128, 0, 32, 0.1);
+}
+
+textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+th {
+    background: #800020;
+
+    color: #ffffff;
+
+    padding: 14px;
+
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+tr:hover td {
+    background: #fff5f7;
+}
+
+
+/* =========================================================
+   GENERAL CONTAINER
+   ========================================================= */
+
+.container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   DETAIL PRODUK
+   ========================================================= */
+
+.product-detail {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.product-detail img {
+    width: 100%;
+
+    max-height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.product-detail-info h1 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.product-detail-info .price {
+    font-size: 22px;
+
+    font-weight: bold;
 
     margin-bottom: 20px;
 }
 
 
-/* =========================
-   PRICE + DETAIL
-========================= */
+/* =========================================================
+   ABOUT / CONTACT
+   ========================================================= */
 
-.product-bottom {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-
-.product-price {
-    font-size: 16px;
-
-    font-weight: bold;
-
-    color: #8e536d;
-}
-
-
-.detail-button {
-    font-size: 13px;
-
-    color: #a75b7b;
-
-    font-weight: bold;
-}
-
-
-.detail-button:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================
-   EMPTY PRODUCT
-========================= */
-
-.empty-product {
-    grid-column: 1 / -1;
-
-    text-align: center;
-
-    padding: 70px 20px;
-
-    background: white;
-
-    border-radius: 15px;
-
-    border: 1px solid #eee1e5;
-}
-
-
-.empty-product h2 {
-    font-family: Georgia, serif;
-
-    margin-bottom: 10px;
-}
-
-
-.empty-product p {
-    color: #777;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-    background: #4d3740;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 25px 0;
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   ABOUT & CONTACT
-   BACKGROUND
-========================= */
-
-.about-page,
-.contact-page {
-    min-height: 100vh;
-
-    background-image:
-        linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.96) 0%,
-            rgba(255, 255, 255, 0.92) 42%,
-            rgba(255, 255, 255, 0.55) 100%
-        ),
-        url("../images/hero-bouquet.png");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-attachment: fixed;
-}
-
-
-/* =========================
-   ABOUT & CONTACT NAVBAR
-========================= */
-
-.about-page .navbar,
-.contact-page .navbar {
-    background: rgba(255, 255, 255, 0.90);
-
-    backdrop-filter: blur(8px);
-}
-
-
-/* =========================
-   ABOUT & CONTACT CONTENT
-========================= */
-
-.about-content,
-.contact-content {
+.about-section,
+.contact-section {
     width: 90%;
 
-    max-width: 1100px;
-
-    min-height: calc(100vh - 140px);
+    max-width: 1000px;
 
     margin: auto;
 
     padding: 80px 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: flex-start;
 }
 
-
-/* =========================
-   SMALL TITLE
-========================= */
-
-.page-label {
-    font-size: 13px !important;
-
-    letter-spacing: 4px;
-
-    color: #a75b7b;
-
-    font-weight: bold;
-
-    margin-bottom: 15px !important;
-}
-
-
-/* =========================
-   ABOUT & CONTACT TITLE
-========================= */
-
-.about-content h1,
-.contact-content h1 {
+.about-section h1,
+.contact-section h1 {
     font-family: Georgia, serif;
 
-    font-size: 48px;
-
-    line-height: 1.1;
-
-    color: #563846;
+    font-size: 45px;
 
     margin-bottom: 25px;
 }
 
-
-/* =========================
-   ABOUT TEXT
-========================= */
-
-.about-content > p:not(.page-label) {
-    max-width: 650px;
-
+.about-section p,
+.contact-section p {
     font-size: 16px;
 
-    line-height: 1.8;
-
-    color: #5c5056;
-
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 
-/* =========================
-   CONTACT INTRO TEXT
-========================= */
+/* =========================================================
+   ALERT
+   ========================================================= */
 
-.contact-content > p:not(.page-label) {
-    max-width: 650px;
+.alert {
+    padding: 12px 15px;
 
-    font-size: 16px;
+    margin-bottom: 20px;
 
-    line-height: 1.8;
+    border-radius: 6px;
 
-    color: #5c5056;
+    background: #ffffff;
 
-    margin-bottom: 18px;
+    color: #800020;
+
+    font-size: 14px;
 }
 
 
-/* =========================
-   CONTACT INFORMATION
-========================= */
+/* =========================================================
+   LOGIN
+   ========================================================= */
 
-.contact-info {
-    margin-top: 15px;
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background: #800020;
 }
 
+.login-container {
+    width: 100%;
 
-.contact-info h3 {
+    max-width: 420px;
+
+    background: #ffffff;
+
+    color: #800020;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.login-container h1 {
     font-family: Georgia, serif;
-
-    font-size: 18px;
-
-    color: #563846;
-
-    margin-top: 18px;
-
-    margin-bottom: 4px;
-}
-
-
-.contact-info p {
-    font-size: 15px !important;
-
-    line-height: 1.6;
-
-    color: #5c5056;
-
-    margin-bottom: 8px !important;
-}
-
-
-/* =========================
-   ABOUT & CONTACT FOOTER
-========================= */
-
-.about-page .footer,
-.contact-page .footer {
-    background: rgba(255, 255, 255, 0.85);
-
-    color: #75666c;
 
     text-align: center;
 
-    padding: 20px 0;
+    font-size: 32px;
 
-    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.login-container h2 {
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+.login-container label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.login-container input {
+    margin-bottom: 18px;
+}
+
+.login-container button {
+    width: 100%;
+
+    padding: 12px;
+
+    background: #800020;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: #5c0015;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================================
+   ADMIN
+   ========================================================= */
+
+.admin-container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 50px 0;
+}
+
+.admin-container h1 {
+    font-family: Georgia, serif;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 900px) {
 
+    .nav-container {
+        width: 92%;
+    }
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
+    .product-detail {
+        grid-template-columns: 1fr;
 
-    .about-content,
-    .contact-content {
-        width: 88%;
+        gap: 30px;
     }
-
 }
 
 
+/* =========================================================
+   MOBILE SMALL
+   ========================================================= */
+
 @media (max-width: 600px) {
+
+    .navbar {
+        position: relative;
+    }
 
     .nav-container {
         flex-direction: column;
@@ -629,290 +718,96 @@ a {
         gap: 15px;
     }
 
-
     .nav-menu {
-        gap: 18px;
+        gap: 12px;
 
         flex-wrap: wrap;
 
         justify-content: center;
     }
 
-
-    .page-header h1 {
-        font-size: 32px;
+    .nav-menu a {
+        font-size: 13px;
     }
 
+    .logout-btn {
+        min-width: 70px;
 
-    .product-grid {
-        grid-template-columns: 1fr;
+        padding: 7px 12px !important;
+
+        font-size: 12px !important;
     }
 
-
-    .product-image {
-        height: 280px;
+    .hero {
+        min-height: 500px;
     }
 
-
-    /* ABOUT & CONTACT MOBILE */
-
-    .about-content,
-    .contact-content {
-        width: 88%;
-
-        min-height: calc(100vh - 160px);
-
-        padding: 60px 0;
+    .hero-content h1 {
+        font-size: 42px;
     }
 
-
-    .about-content h1,
-    .contact-content h1 {
-        font-size: 36px;
-    }
-
-
-    .about-content > p:not(.page-label),
-    .contact-content > p:not(.page-label) {
+    .hero-content span {
         font-size: 15px;
     }
 
-
-    .about-page,
-    .contact-page {
-        background-position: 65% center;
+    .section {
+        padding: 60px 0;
     }
 
-}
-
-/* =========================================
-   FIX FINAL - ABOUT & CONTACT
-========================================= */
-
-body.about-page,
-body.contact-page {
-    background-color: #fffafb !important;
-
-    background-image:
-        linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.97) 0%,
-            rgba(255, 255, 255, 0.92) 45%,
-            rgba(255, 255, 255, 0.45) 100%
-        ),
-        url("../images/hero-bouquet.png") !important;
-
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-
-    color: #3d3035 !important;
-    text-align: left !important;
-}
-
-
-/* NAVBAR */
-
-body.about-page .navbar,
-body.contact-page .navbar {
-    background: rgba(255, 255, 255, 0.92) !important;
-
-    border-bottom: 1px solid #eee1e5 !important;
-
-    position: sticky !important;
-    top: 0 !important;
-
-    z-index: 1000 !important;
-}
-
-
-body.about-page .logo,
-body.contact-page .logo {
-    color: #8e536d !important;
-}
-
-
-body.about-page .nav-menu a,
-body.contact-page .nav-menu a {
-    color: #4b3b42 !important;
-}
-
-
-body.about-page .nav-menu a:hover,
-body.about-page .nav-menu a.active,
-body.contact-page .nav-menu a:hover,
-body.contact-page .nav-menu a.active {
-    color: #a75b7b !important;
-}
-
-
-/* CONTENT */
-
-body.about-page .about-content,
-body.contact-page .contact-content {
-    width: 90% !important;
-
-    max-width: 1100px !important;
-
-    min-height: calc(100vh - 150px) !important;
-
-    margin: 0 auto !important;
-
-    padding: 80px 0 !important;
-
-    display: flex !important;
-
-    flex-direction: column !important;
-
-    justify-content: center !important;
-
-    align-items: flex-start !important;
-
-    text-align: left !important;
-}
-
-
-/* LABEL */
-
-body.about-page .page-label,
-body.contact-page .page-label {
-    font-size: 13px !important;
-
-    letter-spacing: 4px !important;
-
-    color: #a75b7b !important;
-
-    font-weight: bold !important;
-
-    margin: 0 0 15px 0 !important;
-}
-
-
-/* TITLE */
-
-body.about-page .about-content h1,
-body.contact-page .contact-content h1 {
-    font-family: Georgia, serif !important;
-
-    font-size: 50px !important;
-
-    line-height: 1.1 !important;
-
-    color: #563846 !important;
-
-    margin: 0 0 25px 0 !important;
-
-    text-align: left !important;
-}
-
-
-/* ABOUT PARAGRAPH */
-
-body.about-page .about-content p:not(.page-label) {
-    max-width: 650px !important;
-
-    font-size: 16px !important;
-
-    line-height: 1.8 !important;
-
-    color: #5c5056 !important;
-
-    margin: 0 0 18px 0 !important;
-
-    text-align: left !important;
-}
-
-
-/* CONTACT PARAGRAPH */
-
-body.contact-page .contact-content > p:not(.page-label) {
-    max-width: 650px !important;
-
-    font-size: 16px !important;
-
-    line-height: 1.8 !important;
-
-    color: #5c5056 !important;
-
-    margin: 0 0 18px 0 !important;
-
-    text-align: left !important;
-}
-
-
-/* CONTACT INFO */
-
-body.contact-page .contact-info {
-    margin-top: 10px !important;
-
-    text-align: left !important;
-}
-
-
-body.contact-page .contact-info h3 {
-    font-family: Georgia, serif !important;
-
-    font-size: 18px !important;
-
-    color: #563846 !important;
-
-    margin: 18px 0 4px 0 !important;
-}
-
-
-body.contact-page .contact-info p {
-    font-size: 15px !important;
-
-    line-height: 1.6 !important;
-
-    color: #5c5056 !important;
-
-    margin: 0 0 8px 0 !important;
-
-    text-align: left !important;
-}
-
-
-/* FOOTER */
-
-body.about-page footer,
-body.contact-page footer {
-    background: rgba(255, 255, 255, 0.90) !important;
-
-    color: #75666c !important;
-
-    text-align: center !important;
-
-    padding: 20px 0 !important;
-
-    font-size: 13px !important;
-
-    border-top: 1px solid #eee1e5 !important;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-    body.about-page .about-content,
-    body.contact-page .contact-content {
-        width: 88% !important;
-
-        padding: 60px 0 !important;
+    .section-title h2 {
+        font-size: 32px;
     }
 
+    .product-grid {
+        grid-template-columns: 1fr;
 
-    body.about-page .about-content h1,
-    body.contact-page .contact-content h1 {
-        font-size: 36px !important;
+        gap: 20px;
     }
 
-
-    body.about-page .about-content p:not(.page-label),
-    body.contact-page .contact-content p:not(.page-label) {
-        font-size: 15px !important;
+    .product-card img {
+        height: 300px;
     }
 
+    .product-detail-info h1 {
+        font-size: 32px;
+    }
+
+    .about-section h1,
+    .contact-section h1 {
+        font-size: 35px;
+    }
+
+    .login-container {
+        padding: 30px 25px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .logout-btn {
+        padding: 6px 10px !important;
+
+        font-size: 11px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
 }
